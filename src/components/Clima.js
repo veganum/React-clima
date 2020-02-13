@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Clima = ({ resultado }) => {
 
     //Extraer
-    const { name, main, wind, weather, sys } = resultado;
+    const { name, main, wind, sys } = resultado;
 
     if (!name) return null;
 
@@ -41,6 +43,10 @@ const Clima = ({ resultado }) => {
             </div>
         </div>
     );
+}
+
+Clima.propTypes = {
+    resultado: PropTypes.object.isRequired
 }
 
 export default Clima;

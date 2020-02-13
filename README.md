@@ -13,8 +13,8 @@
 
 Para ver el proyecto: https://reac-clima-api.netlify.com/?_ga=2.227481114.625208283.1581634937-1591277200.1581343481
 
-Api: https://home.openweathermap.org/api_keys
-Api-Json:http://api.openweathermap.org/data/2.5/weather?q=guadalajara,mexico&appid=(Aqui ponemos nuestra ApiKey)
+- Api: https://home.openweathermap.org/api_keys
+- Api-Json:http://api.openweathermap.org/data/2.5/weather?q=guadalajara,mexico&appid=(Aqui ponemos nuestra ApiKey)
 
 Proyecto de consulta de clima accediendo a la api openweather hecho con el Framework React.js
 

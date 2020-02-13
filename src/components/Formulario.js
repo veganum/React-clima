@@ -8,6 +8,9 @@ const Formulario = () => {
         pais: ''
     });
 
+    const [error, guardarError] = useState(false);
+
+
     // Extraer ciudad y pais
     const { ciudad, pais } = busqueda;
 
@@ -20,8 +23,27 @@ const Formulario = () => {
         })
     }
 
+    // Cuando el usuario da submit al form
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        //validar
+        if (ciudad.trim() === '' || pais.trim() === '') {
+            guardarError(true);
+            return;
+        }
+
+        guardarError(false);
+
+        //pasarlo al componente  principal
+    }
+
     return (
-        <form>
+        <form
+            onSubmit={handleSubmit}
+        >
+            {error ? <p className="red darken-4 error">Todos los campos son obligatorios</p> : null}
             <div className="input-field col s12">
                 <input
                     type="text"
@@ -42,16 +64,29 @@ const Formulario = () => {
                     onChange={handleChange}
                 >
                     <option value="">--Seleccione un páis--</option>
+                    <option value="ES">España</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="JP">Japon</option>
+                    <option value="KP">Corea del Norte</option>
                     <option value="US">Estados Unidos</option>
                     <option value="MX">México</option>
                     <option value="AR">Argentina</option>
                     <option value="CO">Colombia</option>
                     <option value="CR">Costa Rica</option>
-                    <option value="ES">España</option>
                     <option value="PE">Perú</option>
+
                 </select>
                 <label htmlFor="pais">Ciudad:</label>
             </div>
+
+            <div className="input-field col s12">
+                <input
+                    type="submit"
+                    value="Buscar Clima"
+                    className="waves-effect waves-light btn-large btn-block yellow accent-4"
+                />
+            </div>
+
         </form>
     );
 }

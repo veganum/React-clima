@@ -18,26 +18,26 @@ const Clima = ({ resultado }) => {
                 <h2>El clima de {name}({sys.country}) es:</h2>
                 <p className="temperatura">
                     {parseFloat(main.temp - kelvin, 10).toFixed(2)}
-                    <span>&#x2103;</span>
+                    <span >&#x2103;</span>
                 </p>
-                <p >Temperatura Máxima:
+                <p >Temperatura Máxima:&nbsp;
                     {parseFloat(main.temp_max - kelvin, 10).toFixed(2)}
-                    <span>&#x2103;</span>
+                    <span> &#x2103;</span>
                 </p>
-                <p >Temperatura Minima:
+                <p >Temperatura Minima:&nbsp;
                     {parseFloat(main.temp_min - kelvin, 10).toFixed(2)}
-                    <span>&#x2103;</span>
+                    <span> &#x2103;</span>
                 </p>
                 <hr />
-                <p >Humedad:
+                <p >Humedad:&nbsp;
                     {main.humidity}<span>%</span>
 
                 </p>
-                <p >Presion:
+                <p >Presion:&nbsp;
                     {main.pressure}<span> hPa</span>
                 </p>
                 <hr />
-                <p >Viento:
+                <p >Viento:&nbsp;
                     {wind.speed}<span> Km/h</span>
                 </p>
             </div>

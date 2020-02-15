@@ -76,7 +76,7 @@ const Formulario = ({ busqueda, guardarBusqueda, guardarConsultar }) => {
                     <option value="PE">Perú</option>
 
                 </select>
-                <label htmlFor="pais">Ciudad:</label>
+                <label htmlFor="pais">Pais:</label>
             </div>
 
             <div className="input-field col s12">
